@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasks/core/style/colors.dart';
 import 'package:tasks/core/style/text_style.dart';
 import 'package:tasks/models/onboarding_model.dart';
 class OnboardingBuilder extends StatelessWidget{
@@ -28,6 +29,7 @@ class OnboardingBuilder extends StatelessWidget{
           model.description,
           style: hashStyle(),
         ),
+
       ],
     );
 
