@@ -6,6 +6,10 @@ class DoctorsModel {
   bool isFav;
   String rate;
   String views;
+  String exYears;
+  String percent;
+  String patientStories;
+  String nextAvailable;
   DoctorsModel({
     required this.image,
     required this.name,
@@ -14,6 +18,10 @@ class DoctorsModel {
     required this.isFav,
     required this.rate,
     required this.views,
+    required this.exYears,
+    required this.percent,
+    required this.patientStories,
+    required this.nextAvailable,
   });
 }
 
@@ -26,7 +34,11 @@ List<DoctorsModel> doctors = [
     salary: '22.00/hours',
     isFav: true,
     rate: '3.7',
-    views: '2358'
+    views: '2358',
+    exYears: '5 Years experience',
+    patientStories: '69 patient stories',
+    percent: '87 %',
+    nextAvailable: '10:00 AM tomorrow',
   ),
   DoctorsModel(
     image: 'assets/images/doc3.jpg',
@@ -35,7 +47,11 @@ List<DoctorsModel> doctors = [
     salary: '21.00/hours',
     isFav: false,
     rate: '2.7',
-      views: '2468'
+      views: '2468',
+    exYears: '7 Years experience',
+    patientStories: '54 patient stories',
+    percent: '78 %',
+    nextAvailable: '12:00 PM tomorrow',
 
   ),
   DoctorsModel(
@@ -45,7 +61,11 @@ List<DoctorsModel> doctors = [
     salary: '23.00/hours',
     isFav: true,
     rate: '3.1',
-      views: '2478'
+      views: '2478',
+    exYears: '9 Years experience',
+    patientStories: '69 patient stories',
+    percent: '75 %',
+    nextAvailable: '01:00 PM tomorrow',
 
   ),
   DoctorsModel(
@@ -55,7 +75,12 @@ List<DoctorsModel> doctors = [
     salary: '29.00/hours',
     isFav: false,
     rate: '3.5',
-      views: '3256'
+      views: '3256',
+    exYears: '6 Years experience',
+    patientStories: '80 patient stories',
+    percent: '91 %',
+    nextAvailable: '03:00 PM tomorrow',
+
 
   ),
   DoctorsModel(
@@ -65,7 +90,12 @@ List<DoctorsModel> doctors = [
     salary: '27.00/hours',
     isFav: true,
     rate: '3.4',
-      views: '3258'
+      views: '3258',
+    exYears: '9 Years experience',
+    nextAvailable: '02:00 PM tomorrow',
+
+    patientStories: '47 patient stories',
+    percent: '53 %',
 
   ),
   DoctorsModel(
@@ -75,7 +105,11 @@ List<DoctorsModel> doctors = [
     salary: '25.00/hours',
     isFav: false,
     rate: '3.2',
-      views: '2789'
+      views: '2789',
+    exYears: '6 Years experience',
+    patientStories: '78 patient stories',
+    percent: '85 %',
+    nextAvailable: '10:00 Am tomorrow',
 
   ),
 ];
