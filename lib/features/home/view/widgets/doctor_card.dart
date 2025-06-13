@@ -24,7 +24,7 @@ Widget docCardBuilder (DoctorsModel model)=>
                 size: 17,
                 color: AppColors.amber,
               ),
-              Text(' 3.7',
+              Text(model.rate,
                 style: titleStyle(textSize: 15.0),
               ),
             ],

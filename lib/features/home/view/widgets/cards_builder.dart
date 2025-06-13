@@ -20,7 +20,9 @@ Widget cardsBuilder(DoctorsModel model)=>Card(
         ),
       ),
       Text(model.name,
-        style: titleStyle(),
+        style: titleStyle(
+          textSize: 19.0
+        ),
       ),
       Text(model.major,
         style: hashStyle(),),
@@ -48,7 +50,7 @@ Widget cardsBuilder(DoctorsModel model)=>Card(
           ),
           Icon(
             Icons.star,
-            color: AppColors.amber,
+            color: AppColors.grey,
             size: 20,
           ),
 

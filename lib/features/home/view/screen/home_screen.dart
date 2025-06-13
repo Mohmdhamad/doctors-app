@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tasks/features/home/view/widgets/app_bar.dart';
+import 'package:tasks/core/style/background.dart';
 import 'package:tasks/features/home/view/widgets/bottom_nav.dart';
 import 'package:tasks/features/home/view/widgets/home_body.dart';
 
@@ -8,8 +8,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: appBarHome(),
+    return BackgroundScaffold(
       body: HomeBody(),
       bottomNavigationBar: bottomNav(),
     );

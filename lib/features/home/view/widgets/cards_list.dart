@@ -13,7 +13,7 @@ class CardsList extends StatelessWidget {
     return horizontalListBuilder(
         count: doctors.length,
         builderWidget: (index)=>cardsBuilder(doctors[index]),
-        height: 270,
+        height: 250,
     );
   }
 }

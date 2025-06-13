@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:tasks/features/home/view/screen/home_screen.dart';
+import 'package:tasks/features/auth/view/screen/login_screen.dart';
 import 'package:tasks/features/onboarding/view/widgets/onboarding_builder.dart';
 import 'package:tasks/models/onboarding_model.dart';
 import 'package:tasks/widgets/functions.dart';
 import '../../../../core/style/colors.dart';
 import '../../../../core/style/text_style.dart';
+import '../../../auth/view/screen/register_screen.dart';
 
 class OnboardingBody extends StatefulWidget {
   const OnboardingBody({super.key});
@@ -52,7 +53,7 @@ class _OnboardingBodyState extends State<OnboardingBody> {
             child: TextButton(
               onPressed: () {
                 if (isLast == true) {
-                    navigateAndFinish(context, HomeScreen());
+                    navigateAndFinish(context, RegisterScreen());
                 } else {
                   boardController.nextPage(
                     duration: Duration(milliseconds: 770),
@@ -69,7 +70,7 @@ class _OnboardingBodyState extends State<OnboardingBody> {
           SizedBox(height: 20.0),
           TextButton(
             onPressed: () {
-              navigateAndFinish(context, HomeScreen());
+              navigateAndFinish(context, LoginScreen());
             },
             child: Text('Skip', style: hashStyle(textSize: 18.0)),
           ),

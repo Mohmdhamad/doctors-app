@@ -16,3 +16,15 @@ Widget horizontalListBuilder({
 
   ),
 );
+
+Widget verticalListBuilder({
+  required Widget Function (int)builderWidget,
+  required int count,
+})=>ListView.separated(
+  itemBuilder: (context,index)=>builderWidget(index),
+  separatorBuilder: (context,index)=> const SizedBox(width: 7,),
+  itemCount: count,
+  physics: BouncingScrollPhysics(),
+  shrinkWrap: true,
+
+);

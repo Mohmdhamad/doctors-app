@@ -12,6 +12,16 @@ TextStyle titleStyle({
     fontWeight: FontWeight.bold,
   );
 }
+TextStyle bodyStyle({
+  Color color = AppColors.black,
+  double textSize = 19.0,
+}){
+  return TextStyle(
+    color: color,
+    fontSize: textSize,
+    fontWeight: FontWeight.w500,
+  );
+}
 
 TextStyle hashStyle({
   Color color = AppColors.grey,

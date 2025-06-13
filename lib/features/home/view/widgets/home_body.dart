@@ -2,11 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tasks/core/style/colors.dart';
 import 'package:tasks/core/style/text_style.dart';
+import 'package:tasks/features/find_doctors/view/screen/find_doctors.dart';
 import 'package:tasks/features/home/view/widgets/cards_list.dart';
 import 'package:tasks/features/home/view/widgets/doc_card_list.dart';
+import 'package:tasks/features/home/view/widgets/info_appbar.dart';
 import 'package:tasks/features/home/view/widgets/live_list.dart';
 import 'package:tasks/features/home/view/widgets/majors_list.dart';
+import 'package:tasks/features/popular_doctors/view/screen/popular_doctors.dart';
 import 'package:tasks/models/doctors_model.dart';
+import 'package:tasks/widgets/functions.dart';
 
 class HomeBody extends StatelessWidget {
    HomeBody({super.key});
@@ -21,34 +25,74 @@ class HomeBody extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           spacing: 15.0,
           children: [
+            SizedBox(
+              height: 160.0,
+              child: Stack(
+                alignment: Alignment.bottomCenter,
+                children: [
+                  Align(
+                      alignment: Alignment.topCenter,
+                      child: CustomHomeAppBar(),),
+                  TextFormField(
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.search),
+                        hintText: 'Search ',
+                        filled: true,
+                        fillColor: AppColors.white,
+                        suffix: Icon(Icons.clear),
+                        contentPadding: const EdgeInsets.symmetric( vertical: 7,horizontal: 20.0,
+                        ),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                          borderSide: BorderSide(color: AppColors.grey),
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                          borderSide: BorderSide(color: AppColors.grey),
+                        ),
+                      ),
+                    ),
+                ],
+              ),
+            ),
             Text(
               'Live Doctors',
               style: titleStyle(),
             ),
             LiveList(),
             MajorsList(),
-            Row(
-              children: [
-                Text('Popular Doctors',
-                style: titleStyle(),
-                ),
-                Spacer(),
-                Text('See all >',
-                style: hashStyle(),
-                ),
-              ],
+            InkWell(
+              onTap: (){
+                navigateTo(context, PopularDoctorsScreen());
+              },
+              child: Row(
+                children: [
+                  Text('Popular Doctors',
+                  style: titleStyle(),
+                  ),
+                  Spacer(),
+                  Text('See all >',
+                  style: hashStyle(),
+                  ),
+                ],
+              ),
             ),
             CardsList(),
-            Row(
-              children: [
-                Text('Feature Doctors',
-                  style: titleStyle(),
-                ),
-                Spacer(),
-                Text('See all >',
-                  style: hashStyle(),
-                ),
-              ],
+            InkWell(
+              onTap: (){
+                navigateTo(context, FindDoctorsScreen());
+              },
+              child: Row(
+                children: [
+                  Text('Feature Doctors',
+                    style: titleStyle(),
+                  ),
+                  Spacer(),
+                  Text('See all >',
+                    style: hashStyle(),
+                  ),
+                ],
+              ),
             ),
             DocCardList(),
           ],
