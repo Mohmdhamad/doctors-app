@@ -26,6 +26,7 @@ class HomeBody extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           spacing: 15.0,
           children: [
+            appBarHome(),
             Text(
               'Live Doctors',
               style: titleStyle(),

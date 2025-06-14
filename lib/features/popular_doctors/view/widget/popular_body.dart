@@ -11,6 +11,7 @@ class PopularDoctorsBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return BackgroundScaffold(
       appBar: defaultAppBar(context,
+        title: '',
         actions: [
           Icon(Icons.search_sharp),
           SizedBox(width: 20.0),

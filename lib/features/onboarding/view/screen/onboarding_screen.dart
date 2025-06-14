@@ -9,7 +9,6 @@ class OnboardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BackgroundScaffold(
-      appBar: onboardingAppBar(),
       body: OnboardingBody(),
     );
   }

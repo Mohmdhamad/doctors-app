@@ -3,7 +3,7 @@ import 'package:tasks/core/style/colors.dart';
 import 'package:tasks/core/style/text_style.dart';
 import 'package:tasks/features/live/view/screen/live_screen.dart';
 import 'package:tasks/models/doctors_model.dart';
-import 'package:tasks/widgets/functions.dart';
+
 class LiveBuilder extends StatelessWidget {
   const LiveBuilder(this.doctorsModel,{super.key});
   final DoctorsModel doctorsModel;
@@ -65,7 +65,7 @@ class LiveBuilder extends StatelessWidget {
           )
         ],
       ),
-    );;
+    );
   }
 }
 

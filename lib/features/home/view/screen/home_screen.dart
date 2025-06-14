@@ -10,7 +10,6 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BackgroundScaffold(
-      appBar: appBarHome(),
       body: HomeBody(),
       bottomNavigationBar: bottomNav(),
     );
